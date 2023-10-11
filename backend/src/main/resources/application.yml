@@ -3,9 +3,12 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://medicine-data-db:5432/medicine?reWriteBatchedInserts=true
-    username: admin
-    password: admin
+    # for usage in docker
+#    url: jdbc:postgresql://medicine-data-db:5432/medicine?reWriteBatchedInserts=true
+    # for usage in development mode
+    url: jdbc:postgresql://localhost:5432/medicine?reWriteBatchedInserts=true
+    username: postgres
+    password: postgres
   jpa:
     hibernate:
       ddl-auto: create-drop

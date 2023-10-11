@@ -8,7 +8,7 @@
 		<version>3.1.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.pedrycz-pietrak</groupId>
+	<groupId>com.pietrak-pasel</groupId>
 	<artifactId>medicine-data</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>medicine-data</name>
