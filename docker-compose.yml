@@ -5,8 +5,8 @@ services:
       container_name: medicine-data-db
       image: postgres
       environment:
-        POSTGRES_USER: admin
-        POSTGRES_PASSWORD: admin
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: postgres
         POSTGRES_DB: medicine
       volumes:
         - db:/data/postgres

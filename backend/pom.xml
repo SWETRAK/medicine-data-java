@@ -8,7 +8,8 @@
 		<version>3.1.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.pietrak-pasel</groupId>
+	<packaging>jar</packaging>
+	<groupId>com.pietrak-pasek</groupId>
 	<artifactId>medicine-data</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>medicine-data</name>
@@ -35,6 +36,8 @@
 			<artifactId>spring-restdocs-mockmvc</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- JWT -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -59,17 +62,6 @@
 			<artifactId>passay</artifactId>
 			<version>1.6.3</version>
 		</dependency>
-
-<!--		<dependency>-->
-<!--			<groupId>org.codehaus.jackson</groupId>-->
-<!--			<artifactId>jackson-core-asl</artifactId>-->
-<!--			<version>1.9.13</version>-->
-<!--		</dependency>-->
-<!--		<dependency>-->
-<!--			<groupId>org.codehaus.jackson</groupId>-->
-<!--			<artifactId>jackson-mapper-asl</artifactId>-->
-<!--			<version>1.9.13</version>-->
-<!--		</dependency>-->
 
 		<!-- DOCS -->
 		<dependency>
@@ -131,6 +123,7 @@
     </dependencies>
 
 	<build>
+		<finalName>medicineData</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

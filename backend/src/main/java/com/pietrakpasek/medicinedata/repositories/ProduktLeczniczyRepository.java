@@ -20,7 +20,7 @@ public interface ProduktLeczniczyRepository extends JpaRepository<ProduktLecznic
             " group by  s.substancja_czynna order by count(*) desc limit 10")
     Collection<Object[]> countSubstancjaCzynnaTop10();
 
-    @Query("select new com.pedryczpietrak.medicinedata.model.DTO.CountResult(postac, count(*), sum(case refundowany when true then 1 else 0 end))" +
+    @Query("select new com.pietrakpasek.medicinedata.model.DTO.CountResult(postac, count(*), sum(case refundowany when true then 1 else 0 end))" +
             " from ProduktLeczniczy group by postac order by count(*) desc limit 10")
     List<CountResult> countPostacTop10();
 
