@@ -6,6 +6,7 @@ RUN mvn package -DskipTests
 # Second stage: create a slim image
 FROM eclipse-temurin:17-jdk-alpine
 COPY --from=build /app/target/medicineData.jar /app.jar
+ENV SPRING_PROFILES_ACTIVE="docker"
 ENTRYPOINT ["java", "-jar", "/app.jar"]
 
 
@@ -15,4 +16,4 @@ ENTRYPOINT ["java", "-jar", "/app.jar"]
 ##RUN ./mvnw install -DskipTests
 #RUN ./mvnw package -DskipTests
 #
-#ENTRYPOINT ["java", "-jar", "/ta`rget/medicine-data-0.0.1-SNAPSHOT.jar"]
+#ENTRYPOINT ["java", "-jar", "/target/medicine-data-0.0.1-SNAPSHOT.jar"]
