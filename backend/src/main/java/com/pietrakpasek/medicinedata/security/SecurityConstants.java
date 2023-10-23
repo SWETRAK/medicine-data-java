@@ -1,6 +1,10 @@
 package com.pietrakpasek.medicinedata.security;
 
 public class SecurityConstants {
+
+
+    /** Array containing allowed urls for all user roles
+     */
     public static final String[] WHITELIST = {
             "/documentation",
             "/documentation/**",
@@ -13,6 +17,9 @@ public class SecurityConstants {
             "/webjars/swagger-ui/**", "/proxy/**"
     };
 
+    /** Array containing allowed urls for admin role
+     *
+     */
     public static final String[] ADMIN_ONLY = {
             "/produkt/delete/**", "/produkt/update",
             "/produkt/xml", "/produkt/json"

@@ -67,12 +67,16 @@ public class DataLoader implements CommandLineRunner {
 
         executeDataModifiers(produkty, refundowane);
 
+
+        // writer
         produktLeczniczyRepository.saveAll(produkty);
 
         System.out.println("Data loaded successfully!");
         System.out.println("Loaded in: " + ((System.currentTimeMillis() - start) / 1000.0) + "s");
     }
 
+
+    // Reader
     private <T> T loadFromXml(Class<T> cls, String classPatchToResources) {
         T response = null;
         try {
@@ -85,6 +89,8 @@ public class DataLoader implements CommandLineRunner {
         return response;
     }
 
+
+    // tego nie batchem bo to tylko 2 usery
     private void loadRolesAndUsers() {
         roleRepository.saveAll(List.of(new Role(1, "ROLE_ADMIN"), new Role(0, "ROLE_USER")));
 
@@ -96,6 +102,7 @@ public class DataLoader implements CommandLineRunner {
                 orElseThrow(EntityNotFoundException::new).getName()));
     }
 
+    // processor
     private void executeDataModifiers(List<ProduktLeczniczy> produkty, List<OpakowanieLeku> refundowane) {
         int batch = produkty.size() / BATCHES_QUANTITY;
         System.out.println("Loading data...");

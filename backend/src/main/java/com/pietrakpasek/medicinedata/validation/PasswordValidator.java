@@ -13,13 +13,17 @@ import org.passay.PasswordData;
 
 import java.util.List;
 
+/**
+ * Password validator
+ */
 public class PasswordValidator implements ConstraintValidator<Password, String> {
+
     @Override
     public boolean isValid(String s, ConstraintValidatorContext constraintValidatorContext) {
         org.passay.PasswordValidator validator = new org.passay.PasswordValidator(List.of(
-                new LengthRule(8, 30),
-                new CharacterRule(EnglishCharacterData.UpperCase, 1),
-                new CharacterRule(EnglishCharacterData.LowerCase, 1),
+                new LengthRule(8, 30), // password length between 8 and 30
+                new CharacterRule(EnglishCharacterData.UpperCase, 1), // Min one UpperCase Character
+                new CharacterRule(EnglishCharacterData.LowerCase, 1), // Min one LowerCase Character
                 new CharacterRule(EnglishCharacterData.Digit, 1),
                 new CharacterRule(EnglishCharacterData.Special, 1),
                 new IllegalSequenceRule(EnglishSequenceData.Alphabetical, 5, false),
