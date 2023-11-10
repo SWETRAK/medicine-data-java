@@ -59,7 +59,6 @@ export class MdNavbarComponent implements OnInit, OnDestroy {
                     this.admin = false;
                     this.localStorageService.removeValue(MdConst.USEREMAIL);
                     this.localStorageService.removeValue(MdConst.USERROLE);
-                    console.log(error);
                 }
             })
         );

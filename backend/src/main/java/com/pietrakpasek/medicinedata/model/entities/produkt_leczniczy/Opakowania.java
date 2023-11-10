@@ -9,10 +9,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.data.domain.Persistable;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -23,11 +20,11 @@ import java.util.List;
 
 @Entity
 @Table(name = "opakowania")
+@XmlAccessorType(XmlAccessType.FIELD)
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@XmlAccessorType(XmlAccessType.FIELD)
 public class Opakowania implements Persistable<Integer> {
     @Id
     @XmlTransient

@@ -123,7 +123,6 @@ export class MdTablePageComponent implements OnInit, OnDestroy {
 
                 },
                 error: (error: HttpErrorResponse) => {
-                    console.log(error);
                 }
             })
         );
@@ -138,7 +137,6 @@ export class MdTablePageComponent implements OnInit, OnDestroy {
                     this.prepareProduktyLecznicze(value.content);
                 },
                 error: (error: HttpErrorResponse) => {
-                    console.log(error)
                 }
             })
         );
@@ -159,7 +157,6 @@ export class MdTablePageComponent implements OnInit, OnDestroy {
                     });
                 },
                 error: (error: HttpErrorResponse) => {
-                    console.log(error);
                 }
             })
         );
@@ -174,7 +171,6 @@ export class MdTablePageComponent implements OnInit, OnDestroy {
                     this.prepareOpakowanie(value.content);
                 },
                 error: (error: HttpErrorResponse) => {
-                    console.log(error)
                 }
             })
         );

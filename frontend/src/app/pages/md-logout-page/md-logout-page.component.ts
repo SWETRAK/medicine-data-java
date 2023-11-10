@@ -4,6 +4,7 @@ import {HttpAuthService} from "../../services/http-auth.service";
 import {LocalStorageService} from "../../services/local-storage.service";
 import {MdConst} from "../../md-const";
 import {Router} from "@angular/router";
+import {HttpErrorResponse} from "@angular/common/http";
 
 @Component({
     selector: 'app-md-logout-page',
@@ -38,8 +39,7 @@ export class MdLogoutPageComponent implements OnInit, OnDestroy {
                     this.localStorageService.removeValue(MdConst.USERROLE);
                     await this.router.navigateByUrl("");
                 },
-                error: (error: any) => {
-                    console.log(error);
+                error: (error: HttpErrorResponse) => {
                 }
             })
         )

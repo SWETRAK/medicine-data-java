@@ -97,7 +97,6 @@ export class MdSearchPageComponent implements OnInit, OnDestroy {
                     this.optionForm.get("sortBy")?.setValue(this.sortTypes[0]);
                 },
                 error: (error: HttpErrorResponse) => {
-                    console.log(error);
                 }
             })
         );

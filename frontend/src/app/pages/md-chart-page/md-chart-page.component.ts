@@ -99,7 +99,6 @@ export class MdChartPageComponent implements OnInit, OnDestroy {
                     this.isOne = true;
                 },
                 error: (error: HttpErrorResponse) => {
-                    console.log(error);
                 }
             })
         );
@@ -126,7 +125,6 @@ export class MdChartPageComponent implements OnInit, OnDestroy {
                     this.isOne = false;
                 },
                 error: (error: HttpErrorResponse) => {
-                    console.log(error);
                 }
             })
         );
@@ -148,7 +146,6 @@ export class MdChartPageComponent implements OnInit, OnDestroy {
                     this.isPieChart = true;
                 },
                 error: (error: HttpErrorResponse) => {
-                    console.log(error);
                 }
             })
         );

@@ -46,7 +46,6 @@ export class MdDownloadPageComponent implements OnInit, OnDestroy {
                     }));
                 },
                 error: (error: HttpErrorResponse) => {
-                    console.log(error);
                 }
             })
         );
@@ -72,7 +71,6 @@ export class MdDownloadPageComponent implements OnInit, OnDestroy {
                     this.saveJSON = true;
                 },
                 error: (error: HttpErrorResponse) => {
-                    console.log(error);
                 }
             })
         );
@@ -94,7 +92,6 @@ export class MdDownloadPageComponent implements OnInit, OnDestroy {
                     this.saveXML = true;
                 },
                 error: (error: HttpErrorResponse) => {
-                    console.log(error);
                 }
             })
         );

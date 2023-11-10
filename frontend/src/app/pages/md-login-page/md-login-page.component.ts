@@ -61,8 +61,6 @@ export class MdLoginPageComponent implements OnInit, OnDestroy {
             password: this.loginForm.get("password")?.value
         };
 
-        this.loginForm.get("email")?.setErrors({passwordMismatch: true});
-
         this.subscriptions.push(
             this.httpAuthService.loginUser(loginDto).subscribe({
                 next: async (value: MdUserInfoDto) => {
